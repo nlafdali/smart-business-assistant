@@ -1,0 +1,127 @@
+### GET ALL REQUESTS
+GET http://localhost:8080/api/requests
+
+###
+
+### GET REQUEST BY ID
+GET http://localhost:8080/api/requests/22
+
+###
+
+### CREATE REQUEST
+POST http://localhost:8080/api/requests
+Content-Type: application/json
+
+{
+  "text": "PostgreSQL Test",
+  "category": "GENERAL",
+  "priority": "HIGH"
+}
+
+###
+
+### UPDATE REQUEST
+PUT http://localhost:8080/api/requests/4
+Content-Type: application/json
+
+{
+  "text": "Drucker funktioniert wieder",
+  "category": "GENERAL",
+  "priority": "LOW",
+  "status": "CLOSED"
+}
+
+###
+
+### DELETE REQUEST
+DELETE http://localhost:8080/api/requests/1
+
+###
+
+### VALIDATION ERROR TEST
+POST http://localhost:8080/api/requests
+Content-Type: application/json
+
+{
+  "text": ""
+}
+
+###
+
+### INVALID ENUM TEST
+POST http://localhost:8080/api/requests
+Content-Type: application/json
+
+{
+  "text": "Test",
+  "category": "IT"
+}
+###
+### GET ALL
+GET {{$baseUrl}}
+
+###
+
+### GET BY ID
+GET {{baseUrl}}/1
+
+###
+
+### CREATE
+POST {{$baseUrl}}
+Content-Type: application/json
+
+{
+  "text": "Laptop startet nicht",
+  "category": "GENERAL",
+  "priority": "HIGH"
+}
+###
+### CREATE REQUEST
+POST {{baseUrl}}
+Content-Type: application/json
+
+{
+  "text": "Mein Laptop braucht update",
+  "category": "GENERAL",
+  "priority": "MEDIUM"
+}
+
+###
+
+### UPDATE REQUEST
+PUT http://localhost:8080/api/requests/1
+Content-Type: application/json
+
+{
+  "text": "Drucker funktioniert wieder",
+  "category": "GENERAL",
+  "priority": "LOW",
+  "status": "CLOSED"
+}
+
+###
+
+### DELETE REQUEST
+DELETE http://localhost:8080/api/requests/2
+
+###
+
+### VALIDATION ERROR TEST
+POST http://localhost:8080/api/requests
+Content-Type: application/json
+
+{
+  "text": ""
+}
+
+###
+
+### INVALID ENUM TEST
+POST http://localhost:8080/api/requests
+Content-Type: application/json
+
+{
+  "text": "Test",
+  "category": "IT"
+}

@@ -1,8 +1,13 @@
 package com.example.smartbusinessassistant.dto;
 
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.Size;
+
 public class RequestDto {
 
     private Long id;
+    @NotBlank(message = "Text muss nicht leer sein")
+    @Size(max = 1000, message = "Text darf maximal 1000 Zeichen haben")
     private String text;
     private String category;
     private String priority;
