@@ -15,7 +15,8 @@ public class RequestMapper {
                 request.getText(),
                 request.getCategory().name(),
                 request.getPriority().name(),
-                request.getStatus().name()
+                request.getStatus().name(),
+                request.getAssignedTo()
         );
     }
     public static Request toEntity(RequestDto dto) {
@@ -44,8 +45,7 @@ public class RequestMapper {
         }catch (IllegalArgumentException e) {
             throw new IllegalArgumentException("Erlaubte Werte für status: OPEN, IN_PROGRESS, CLOSED");
         }
-
-
+        request.setAssignedTo(dto.getAssignedTo());
         return request;
     }
 }

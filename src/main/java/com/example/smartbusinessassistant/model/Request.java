@@ -21,6 +21,15 @@ public class Request {
     @Enumerated(EnumType.STRING)
     private Status status;
     private LocalDateTime createdAt;
+    private String assignedTo;
+
+    public String getAssignedTo() {
+        return assignedTo;
+    }
+
+    public void setAssignedTo(String assignedTo) {
+        this.assignedTo = assignedTo;
+    }
 
     // Default values setzen
     @PrePersist

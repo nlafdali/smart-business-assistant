@@ -125,3 +125,15 @@ Content-Type: application/json
   "text": "Test",
   "category": "IT"
 }
+
+###re
+POST http://localhost:8080/api/requests
+Content-Type: application/json
+
+{
+  "text": "Drucker kaputt",
+  "category": "GENERAL",
+  "priority": "HIGH",
+  "assignedTo": "Max"
+}
+###

@@ -1,10 +1,8 @@
 package com.example.smartbusinessassistant.controller;
 
 import com.example.smartbusinessassistant.dto.RequestDto;
-import com.example.smartbusinessassistant.model.Request;
 import com.example.smartbusinessassistant.service.RequestService;
 import jakarta.validation.Valid;
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -21,7 +19,7 @@ public class RequestController {
     }
     @PostMapping
     public RequestDto CreatRequest(@Valid @RequestBody RequestDto dto){
-        return requestService.CreatRequest(dto);
+        return requestService.createRequest(dto);
     }
     @GetMapping
     public List<RequestDto> GetAllRequest(){

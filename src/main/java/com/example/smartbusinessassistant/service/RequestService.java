@@ -21,7 +21,7 @@ public class RequestService {
         this.requestRepository = requestRepository;
     }
 
-    public RequestDto CreatRequest(RequestDto requestDto){
+    public RequestDto createRequest(RequestDto requestDto){
         Request request = RequestMapper.toEntity(requestDto);
         Request saved = requestRepository.save(request);
         return RequestMapper.toDTO(saved);

@@ -12,15 +12,17 @@ public class RequestDto {
     private String category;
     private String priority;
     private String status;
+    private String assignedTo;
 
     public RequestDto() {}
 
-    public RequestDto(Long id, String text, String category, String priority, String status) {
+    public RequestDto(Long id, String text, String category, String priority, String status, String assignedTo) {
         this.id = id;
         this.text = text;
         this.category = category;
         this.priority = priority;
         this.status = status;
+        this.assignedTo = assignedTo;
     }
 
     public Long getId() {
@@ -61,5 +63,13 @@ public class RequestDto {
 
     public void setStatus(String status) {
         this.status = status;
+    }
+
+    public String getAssignedTo() {
+        return assignedTo;
+    }
+
+    public void setAssignedTo(String assignedTo) {
+        this.assignedTo = assignedTo;
     }
 }
